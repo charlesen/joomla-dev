@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>W°FAR</name>
+	<creationDate>23/06/2014</creationDate>
+	<author>Charles EDOU NZE</author>
+	<authorEmail>charlesen@charlesen.fr</authorEmail>
+	<authorUrl>http://charlesen.fr</authorUrl>
+	<copyright>Copyright (C) 2014 ch@rlesen. All rights reserved.</copyright>
+	<license>MIT</license>
+	<version>1.0.0</version>
+	<description>World Forum For Animal rights (W°FAR) template by ch@rlesen</description>
+	<files>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>language</folder>
+		<folder>js</folder>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+	</files>
+	<positions>
+		<position>wfar-topmenu</position>
+		<position>wfar-topquote</position>
+		<position>wfar-search</position>
+		<position>wfar-main</position>
+		<position>wfar-sidebar</position>
+		<position>wfar-bottom</position>
+		<position>wfar-footer</position>
+	</positions>
+	<!-- 	For core templates, we also install/uninstall the language files in the core language folders. -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_wfar.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_wfar.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_wfar.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.tpl_wfar.sys.ini</language>
+	</languages>
+</extension>

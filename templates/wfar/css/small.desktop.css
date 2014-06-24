@@ -1,0 +1,20 @@
+body, html {
+	font-size:14px;
+}
+
+#lpa-menu {
+	width: 74%;
+}
+/**
+#lpa-menu a {
+	width: 12em;
+}**/
+
+#lpa-title h1 {
+	text-align: center;
+	width: 88%;
+}
+
+#lpa-title img {
+	margin-left: 1%;
+}

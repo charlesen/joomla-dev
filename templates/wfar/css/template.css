@@ -1,0 +1,391 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family:Anton;
+	src:url('fonts/Anton.ttf');
+	font-style:normal;
+}
+
+html, body {
+	height:100%;
+}
+
+body {
+	min-height:737px;
+	font-size:14px;
+	font-family: 'Jura', Arial, Helvetica, sans-serif;
+	color:#ddd;
+}
+
+p, footer {
+	color:#555;
+	line-height:1.7em;
+	text-align:justify;
+}
+
+td, h3, h2, adress, label {
+	color:#333;
+}
+
+h4 {
+	font-size: 1.1em;
+}
+
+hr {
+	border-top: 1px solid #ddd;
+}
+
+iframe {
+	width:100%;
+}
+
+footer {
+	border-top:1px solid #ccc;
+	padding:1em 0 0 0;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+#main {
+	width:70%;
+	margin:0 auto;
+}
+
+#naxetech-title {
+	border-radius: 5px;
+}
+
+#naxetech-title .trapeze {
+	background:#fff;
+	padding: 0;
+}
+
+h1.site-title {
+	background: #fff;
+	margin:0 0 0 50px;
+	padding: 0;
+}
+
+h1.site-title .col-xs-1 {
+	padding:0;
+	margin:0;
+}
+
+h1.site-title .col-xs-11 {
+	padding:5px 0;
+}
+
+h1.site-title a {
+	color:#780332;
+	font-size: .85em;
+}
+
+#naxetech-adress {
+	background:#333;
+	font-weight:bolder;
+	color:#fff;
+	padding:1em;
+	text-align:right;
+	border-radius: 0 5px 5px;
+}
+
+#naxetech-header {
+	height:146px;
+	position:relative;
+	margin-top: 2em;
+}
+
+#naxetech-menu {
+	position:absolute;
+	z-index: 1000;
+	width: 100%;
+	height:28px;
+	top: 8em;
+	left: -1em;
+}
+
+#naxetech-social {
+	padding:0;
+	margin-top: 1em;
+}
+
+#naxetech-social img {
+	width:30px;
+	height:30px;
+	float:right;
+	padding-right: 4px;
+}
+
+/** Menu **/
+
+.nav {
+	min-width: 788px;
+	width: 103.5%;
+	background: url(../images/bg_menu.png) 50% 50% repeat-x #fff;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px 0px;
+	height: 28px;
+}
+
+.nav-pills>li>a{
+	text-transform: uppercase;
+}
+
+.nav-pills>li:first-child>a{
+	border-radius:10px 0px 0px 10px;
+}
+
+.nav-pills>li:last-child>a {
+	border-radius:0px 10px 10px 0px;
+}
+
+.nav-pills>li>a, .nav-pills>li>ul>li>a  {
+	color:#000;
+}
+
+.nav>li>a, .nav-pills>li>ul>li>a {
+	padding: 5px;
+	text-align: center;
+	color: #888;
+}
+
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+	background: #038ebc url("../images/button_bg.png") 50% 50% repeat-x;
+}
+
+.nav>li>a, .nav-pills>li>ul>li>a, 
+.nav>li>a:hover, .nav>li>a:focus, .nav-pills>li>ul>li>a:hover {
+	background: transparent url("../images/button2_bg.png") 50% 50% repeat-x;
+}
+
+.nav>li>a:hover, .nav>li>a:focus, .nav-pills>li>ul>li>a:hover {
+	color:#038ebc;
+}
+
+.nav-pills>li.parent ul {
+	display: none;
+	width:100%;
+	padding:0;
+	margin-top:5px;
+	list-style:none;
+	background:#eee;
+	border-radius:5px;
+}
+
+.nav-pills>li.parent ul>li>a{
+	display: block;
+	text-align:center;
+}
+
+.nav-pills>li.parent:hover ul{
+	display:block;
+}
+
+.nav-pills>li{
+	width: 19.81%;
+	min-width: 155px;
+}
+
+
+/** Home Page **/
+#naxetech-innovation {
+	background: #fff url("../images/apple_box.png") repeat-x 0px 0px;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px 0px;
+	padding: 2em;
+}
+#naxetech-innovation td img {
+	width:149px;
+	height:98px;
+	max-width:100%;
+}
+
+#naxetech-gamme tr>td {
+	padding:0 5px;
+	height: 170px;
+}
+
+#naxetech-gamme tr>td h3 {
+	font-size:1em;
+	color:#038EBC;
+	font-weight:bold;
+	padding:0;
+	margin: 0;
+}
+
+#naxetech-gamme tr>td a {
+	text-decoration:underline;
+	color:#ccc;
+}
+
+#naxetech-gamme tr:last-child {
+	background:#fff;
+}
+
+#naxetech-gamme tr:last-child>td {
+	background:#fff;
+}
+#naxetech-gamme td img {
+	width:162px;
+	height:220px;
+	max-width:100%;
+}
+
+#naxetech-gamme .g-item {
+	padding:5px;
+	margin: 10px 0;
+	border-radius:5px;
+	background:#333;
+	width:10em;/**width: 140px;**/
+	height: 12em;
+}
+
+#naxetech-gamme .g-item p {
+	color: #ccc;
+	text-align: left;
+	font-size: .9em;
+	line-height: 1.6em;
+}
+
+#naxetech-presentation td>ul {
+	margin-left: 5%;
+}
+
+#naxetech-presentation a.button1 {
+	display: block;
+	width: 85%;
+	margin: 0 auto;
+}
+
+#naxetech-presentation td>ul>li {
+	font-size:1.3em;
+}
+
+#naxetech-presentation td:last-child{
+	color: #fff;
+	background: #333;
+	width: 40%;
+	vertical-align: top;
+	border-radius: 7px;
+}
+
+#naxetech-presentation h4 {
+	text-align:center;
+}
+#naxetech-presentation h2 {
+	border-bottom:1px solid #ddd;
+	padding-bottom:.7em;
+}
+
+.page-accueil tr {
+	vertical-align:bottom;
+}
+
+.page-produits #naxetech-sidebar h3, .page-particuliers #naxetech-sidebar h3{
+	margin-left:43%;
+}
+
+.page-police-securite #naxetech-content img, .page-entreprise #naxetech-content img ,
+.page-evenements #naxetech-content img, .page-golfeurs #naxetech-content img, .page-agriculteurs #naxetech-content img{
+	border-radius:5px;
+	box-shadow: rgba(0, 0, 0, 0.498039) 0px 1px 3px 0px;
+	background-color: #fff;
+	border: 1px solid #fff;
+}
+
+.page-police-securite td {
+	padding-right:1.5em;
+}
+
+.page-agriculteurs #naxetech-content .col-xs-4 img {
+	padding-right:5px;
+}
+
+.page-references td {
+	color:#777;
+}
+
+.page-references tr {
+	vertical-align:middle;
+}
+
+.page-references h4{
+	color:#000;
+	font-weight: bold;
+}
+
+#contact-us h2 {
+	padding-bottom:1em;
+}
+
+#contact-us h3 {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+#contact-us input[type="text"], #contact-us input[type="email"], #contact-us textarea {
+	width:90%;
+	background:#333;
+	color:#fff;
+	border:0;
+	border-radius:5px;
+	padding:.5em;
+}
+
+#contact-us textarea {
+	height:10em;
+}
+
+/** Class helpers **/
+.color_1 {
+	color:#038EBC;
+}
+
+.color_2 {
+	color:#780332;
+}
+
+.border_bottom {
+	border-bottom:1px solid #ddd;
+}
+
+#contact-us button, .button1 {
+	background: #038ebc url("../images/button_bg.png") 50% 50% repeat-x;
+	padding:.6em 1em;
+	border:0;
+	border-radius:5px;
+	color:#fff;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#contact-us button {
+	padding:.3em;
+}
+
+#contact-us .iframe {
+	border:1px solid #ccc;
+	border-radius:5px;
+	padding:1em;
+}
+
+#system-message {
+	color:#00aa77;
+	text-align: center;
+}
+
+.button1:hover {
+	color:#fff;
+}
+
+.uppercase {
+	text-transform:uppercase;
+}
+
+.credits {
+	float:right;
+	color:#888;
+}
