@@ -27,10 +27,12 @@
 	</files>
 	<positions>
 		<position>wfar-topmenu</position>
-		<position>wfar-topquote</position>
 		<position>wfar-search</position>
 		<position>wfar-main</position>
+		<position>wfar-maintop</position>
 		<position>wfar-sidebar</position>
+		<position>wfar-breadcumbs</position>
+		<position>wfar-mainbottom</position>
 		<position>wfar-bottom</position>
 		<position>wfar-footer</position>
 	</positions>

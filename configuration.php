@@ -4,7 +4,7 @@ class JConfig {
 	public $offline_message = 'Ce site est en maintenance.<br /> Merci de revenir ultérieurement.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'Joomla! Dev by ch@rlesen';
+	public $sitename = 'W°FAR';
 	public $editor = 'tinymce';
 	public $captcha = '0';
 	public $list_limit = '20';
@@ -21,7 +21,7 @@ class JConfig {
 	public $secret = 'MG8X09GVmHcNoKs9';
 	public $gzip = '0';
 	public $error_reporting = 'default';
-	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&amp;keyref=Help{major}{minor}:{keyref}';
+	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '127.0.0.1';
 	public $ftp_port = '21';
 	public $ftp_user = '';
@@ -42,19 +42,25 @@ class JConfig {
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
-	public $MetaDesc = '';
-	public $MetaKeys = '';
+	public $MetaDesc = 'World Forum for animal rights';
+	public $MetaKeys = 'wfar,w°far,animal,rights,forum';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';
 	public $robots = '';
 	public $sef = '1';
-	public $sef_rewrite = '0';
-	public $sef_suffix = '0';
+	public $sef_rewrite = '1';
+	public $sef_suffix = '1';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $log_path = 'C:\\xampp\\htdocs\\joomla\\www/logs';
 	public $tmp_path = 'C:\\xampp\\htdocs\\joomla\\www/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'database';
+	public $MetaRights = '';
+	public $sitename_pagetitles = '2';
+	public $force_ssl = '0';
+	public $feed_email = 'author';
+	public $cookie_domain = '';
+	public $cookie_path = '';
 }

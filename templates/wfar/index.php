@@ -16,7 +16,7 @@ $menu = $app->getMenu();
 
 $pageClass = $menu->getActive()->alias ? 'class="page-'.$menu->getActive()->alias.'"' : '';
 
-$mainClass = $this->countModules('wfar-sidebar') ? 'col-xs-9' : 'col-xs-12';
+$mainClass = $this->countModules('wfar-sidebar') ? ' col-xs-9' : ' col-xs-12';
 $moduleCount = $this->countModules( 'wfar-main + wfar-sidebar' );
 
 JFactory::getDocument()->setGenerator('');
@@ -29,7 +29,7 @@ JFactory::getDocument()->setGenerator('');
 		<meta name="author" content="Charles EDOU NZE" />
 
 		<!-- Fonts & CSS -->
-		<link href='http://fonts.googleapis.com/css?family=Jura:400,600' rel='stylesheet' type='text/css'>
+		<!--<link href='http://fonts.googleapis.com/css?family=Jura:400,600' rel='stylesheet' type='text/css'>-->
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/bootstrap/css/bootstrap.min.css" type="text/css" />
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/template.css" type="text/css" />
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/small.desktop.css" media="(max-width: 1400px)" />
@@ -44,62 +44,57 @@ JFactory::getDocument()->setGenerator('');
 	</head>
 	<body <?php echo $pageClass ?>>
 		<div id="main">
-			<div id="wfar-header">
-				<div id="wfar-title" class="row">
-					<h1 class="site-title col-xs-6">
-						<div class="col-xs-1">
-							<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo.png" style="width:39px; height:auto;"/>
-						</div>
-						<div class="col-xs-11">
-							<a href="<?php echo $this->baseurl ?>" title="Home"><?php echo htmlspecialchars($app->getCfg('sitename')); ?></a>
-						</div>
+			<div id="wfar-header" class="row">
+				<div id="wfar-logo" class="col-xs-4 row">
+					<img class="col-xs-5" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo-sd.png" />
+					<h1 class="site-title col-xs-7">
+						<a href="<?php echo $this->baseurl ?>" title="Home"><?php echo htmlspecialchars($app->getCfg('sitename')); ?></a>
 					</h1>
-				</div>
+				</div><!--/wfar-logo -->
 				
-				<div id="wfar-menu">
-					<?php if($this->countModules('wfar-topmenu')) : ?>
-						<jdoc:include type="modules" name="wfar-topmenu" />
-					<?php endif; ?>
+				<div id="wfar-menu" class="col-xs-5">
+				<?php if($this->countModules('wfar-topmenu')) : ?>
+					<jdoc:include type="modules" name="wfar-topmenu" />
+				<?php endif; ?>
 				</div><!--/wfar-menu -->
 				
+				<div id="wfar-search" class="col-xs-3">
 				<?php if($this->countModules('wfar-search')) : ?>
-				<div class="col-xs-12">
 					<jdoc:include type="modules" name="wfar-search" style="none" />
-				</div>
 				<?php endif; ?>
-			</div><!--/header -->
+				</div><!--/wfar-search -->
+			</div><!--/wfar-header -->
 			
-			<div id="wfar-content">
 			
-				<?php if($this->countModules('wfar-topquote')) : ?>
-					<jdoc:include type="modules" name="wfar-topquote" style="none" />
+			<div id="wfar-center" class="row">
+				<?php if($this->countModules('wfar-sidebar')) : ?>
+				<div id="wfar-sidebar" class="col-xs-3">
+					<jdoc:include type="modules" name="wfar-sidebar" style="sidebar" />
+				</div><!--Sidebar -->
 				<?php endif; ?>
 				
-				<?php if( $this->countModules('wfar-main')  || $this->countModules('wfar-sidebar')) : ?>
-					<div class="row">
-						<?php if($this->countModules('wfar-sidebar')) : ?>
-						<div class="col-xs-3">
-							<div id="wfar-sidebar">
-								<jdoc:include type="modules" name="wfar-sidebar" style="sidebar" />
-							</div><!--Sidebar/Main -->
-						</div>
+				<div id="wfar-main" class="row<?php echo $mainClass?>">
+					<?php if($this->countModules('wfar-maintop')) : ?>
+					<div id="wfar-maintop">
+						<jdoc:include type="modules" name="wfar-maintop" style="xhtml" />
+					</div><!--Main -->
+					<?php endif ?>
+					
+					<div id="wfar-content">
+						<?php if($this->countModules('wfar-breadcumbs')) : ?>
+							<jdoc:include type="modules" name="wfar-breadcumbs" style="breadcumbs" />
 						<?php endif; ?>
-						<?php if($this->countModules('wfar-main')) : ?>
-						<div class="<?php echo $mainClass?>">
-							<div id="wfar-main">
-								<jdoc:include type="modules" name="wfar-main" style="none" />
-							</div><!--Main -->
-						</div>
-						<?php endif; ?>
-					</div>
-				<?php endif ?>
-				
-				<div id="content">
-					<jdoc:include type="message" />
-					<jdoc:include type="component" />
-				</div><!--/content -->
-				
-			</div><!--/content-wrapper -->
+						<jdoc:include type="message" />
+						<jdoc:include type="component" />
+					</div><!--/wfar-content -->
+					
+					<?php if($this->countModules('wfar-mainbottom')) : ?>
+					<div id="wfar-mainbottom">				
+						<jdoc:include type="modules" name="wfar-mainbottom" style="bottommodule" />
+					</div><!-- /bottom-->
+					<?php endif; ?>
+				</div><!--/wfar-main -->
+			</div><!--/wfar-center -->
 			
 			<?php if($this->countModules('wfar-bottom')) : ?>
 			<div id="wfar-bottom">				
@@ -107,11 +102,13 @@ JFactory::getDocument()->setGenerator('');
 			</div><!-- /bottom-->
 			<?php endif; ?>
 			
-			<footer id="wfar-footer" class="clearfix">
+			<footer id="wfar-footer">
 				<p class="col-xs-7 uppercase">&copy; <?php echo date ('Y'); ?> <?php echo htmlspecialchars($app->getCfg('sitename')); ?></p>
-				<p class="credits">
-					<jdoc:include type="modules" name="wfar-footer" style="bottommodule" />
-				</p>
+				<?php if($this->countModules('wfar-footer')) : ?>
+				<div id="wfar-footer">
+					<jdoc:include type="modules" name="wfar-footer" style="xhtml" />
+				</div>
+				<?php endif; ?>
 			</footer><!--/footer -->
 			
 		</div><!--/main -->
