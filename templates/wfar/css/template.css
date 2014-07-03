@@ -1,12 +1,11 @@
 @charset "UTF-8";
 
-html, body {
-	font-family:"Helvetica Heu", Arial, Helvetica, sans-serif;
-}
-
 body {
+	font-family:"Helvetica Heu", Arial, Helvetica, sans-serif;
 	font-size:13px;
 	color:#555;
+	opacity: 1;
+	background:url("../images/bg1.jpg") #000 top center;
 }
 
 p, footer {
@@ -16,6 +15,10 @@ p, footer {
 
 iframe, img {
 	width:100%;
+}
+
+a {
+	color: #325d6b;
 }
 
 a, a:hover {
@@ -33,12 +36,27 @@ a, a:hover {
 	margin:0 auto;
 }
 
-
+/** #325D6B **/
 #wfar-sidebar {
 	margin-top: 10px;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkAQMAAADbzgrbAAAAA1BMVEUAAACnej3aAAAAAXRSTlOArV5bRgAAAAxJREFUCB1jYBieAAAA2AABq1VUCwAAAABJRU5ErkJggg==);
+}
+
+#wfar-sidebar a {
+	color:#fff;
 }
 
 /** Menu **/
+
+.nav {
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	/**background-color: #325d6b;**/
+	background-color: #555;
+}
 
 .nav-pills>li.parent ul {
 	display: none;
@@ -46,7 +64,6 @@ a, a:hover {
 	padding:0;
 	margin-top:5px;
 	list-style:none;
-	background:#eee;
 	border-radius:5px;
 }
 
