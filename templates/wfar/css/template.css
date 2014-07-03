@@ -13,8 +13,16 @@ p, footer {
 	text-align:justify;
 }
 
+footer {
+	margin:1em 0;
+}
+
+footer p {
+	padding:0;
+}
+
 iframe, img {
-	width:100%;
+	max-width:100%;
 }
 
 a {
@@ -31,31 +39,74 @@ a, a:hover {
 	margin-top: 10px;
 }
 
+#wfar-logo {
+	padding:0;
+}
+
+#wfar-logo img {
+	max-width:150px;
+}
+
+#site-title {
+	padding:0;
+	margin:0;
+	text-align: center;
+	font-size: 2.5em;
+	/**width: 150px;**/
+}
+
+#site-title a {
+	color:#000;
+	font-weight:bold;
+}
+
 #main {
 	width:80%;
 	margin:0 auto;
 }
 
+#wfar-menu {
+	padding:0;
+	position:relative;
+	height:40px;
+}
+
 /** #325D6B **/
-#wfar-sidebar {
+
+#wfar-menu {
 	margin-top: 10px;
-	padding-top: 2em;
-	padding-bottom: 2em;
 	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkAQMAAADbzgrbAAAAA1BMVEUAAACnej3aAAAAAXRSTlOArV5bRgAAAAxJREFUCB1jYBieAAAA2AABq1VUCwAAAABJRU5ErkJggg==);
 }
 
-#wfar-sidebar a {
+#wfar-sidebar a, #wfar-menu a {
 	color:#fff;
 }
 
 /** Menu **/
 
-.nav {
+.wfar-menu, .nav-pills>li.parent ul {
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkAQMAAADbzgrbAAAAA1BMVEUAAACnej3aAAAAAXRSTlOArV5bRgAAAAxJREFUCB1jYBieAAAA2AABq1VUCwAAAABJRU5ErkJggg==);
+		position:relative;
 }
 
-.nav>li>a:hover, .nav>li>a:focus {
+#wfar-menu .nav {
+	position:absolute;
+	width:100%;
+	z-index:9000;
+}
+
+.nav>li>a {
+	text-align:center;
+}
+
+.nav>li>a:hover, .nav>li>a:focus,
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus,
+.nav-pills>li.parent>ul>li>a:hover,
+.nav-pills>li.parent>ul>li.active>a:hover,
+.nav-pills>li.parent>ul>li.active>a:focus {
 	/**background-color: #325d6b;**/
 	background-color: #555;
+	color: #fff;
 }
 
 .nav-pills>li.parent ul {
@@ -76,9 +127,20 @@ a, a:hover {
 	display:block;
 }
 
-.nav-pills>li{
-	width: 19.81%;
-	min-width: 155px;
+#wfar-menu .nav-pills>li{
+	min-width: 10.25%;
+}
+
+#wfar-sidebar .nav-pills>li{
+	width: 70%;
+}
+
+#wfar-sidebar nav {
+	padding:1em 0;
+}
+
+#wfar-sidebar .nav-pills>li {
+	left:15%;
 }
 
 /** Contact **/
@@ -103,6 +165,15 @@ a, a:hover {
 
 #contact-us textarea {
 	height:10em;
+}
+
+/** Buttons **/
+
+input[type="submit"], button {
+	background-color:#ff7f00;
+	border:none;
+	color:#fff;
+	border-radius:3px;
 }
 
 /** Class helpers **/

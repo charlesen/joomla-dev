@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 // Note. It is important to remove spaces between elements.
 ?>
-<!-- The class on the root UL tag was changed to match the Blueprint nav style -->
+<nav class="wfar-menu">
 <ul class="nav nav-pills<?php echo $params->get('class_sfx');?>"<?php
 	$tag = '';
 	if ($params->get('tag_id')!=NULL) {
@@ -67,4 +67,9 @@ foreach ($list as $i => &$item) :
 		echo '</li>';
 	}
 endforeach;
-?></ul>
+?></ul></nav>
+<style>
+	.nav-pills>li+li {
+		margin-left:1px;
+	}
+</style>

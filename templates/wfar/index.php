@@ -44,25 +44,34 @@ JFactory::getDocument()->setGenerator('');
 	</head>
 	<body <?php echo $pageClass ?>>
 		<div id="main">
-			<div id="wfar-header" class="row">
-				<div id="wfar-logo" class="col-xs-4 row">
-					<img class="col-xs-5" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo-sd.png" />
-					<h1 class="site-title col-xs-7">
-						<a href="<?php echo $this->baseurl ?>" title="Home"><?php echo htmlspecialchars($app->getCfg('sitename')); ?></a>
-					</h1>
-				</div><!--/wfar-logo -->
+			<div id="wfar-header">
+				<div class="row">
+					<div id="wfar-logo" class="col-xs-2">
+							<a href="<?php echo $this->baseurl ?>" title="Home">
+								<img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/logo-sd.png" />
+							</a>
+					</div><!--/wfar-logo -->
+					
+					<div class="col-xs-7">
+						<h1 id="site-title">
+							<a href="<?php echo $this->baseurl ?>" title="Home"><?php echo htmlspecialchars($app->getCfg('sitename')); ?></a>
+						</h1>
+					</div><!--/site-title -->
+					
+					<?php if($this->countModules('wfar-search')) : ?>
+					<div id="wfar-search" class="col-xs-3">
+							<jdoc:include type="modules" name="wfar-search" style="none" />
+					</div><!--/wfar-search -->
+					<?php endif; ?>
+				</div> 
 				
-				<div id="wfar-menu" class="col-xs-5">
+				
 				<?php if($this->countModules('wfar-topmenu')) : ?>
+				<div id="wfar-menu">
 					<jdoc:include type="modules" name="wfar-topmenu" />
-				<?php endif; ?>
 				</div><!--/wfar-menu -->
-				
-				<div id="wfar-search" class="col-xs-3">
-				<?php if($this->countModules('wfar-search')) : ?>
-					<jdoc:include type="modules" name="wfar-search" style="none" />
 				<?php endif; ?>
-				</div><!--/wfar-search -->
+				
 			</div><!--/wfar-header -->
 			
 			
